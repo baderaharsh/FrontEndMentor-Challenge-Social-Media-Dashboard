@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap" rel="stylesheet">
+  <script src="app.js" charset="utf-8"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: white; margin-top: 10px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div class="upper-container">
+  <div class="container">
+    <div class="header">
+        <div class="heading">
+        <h3 class="white-text" style="margin-bottom: 0px; font-weight: inherit;">Social Media Dashboard</h2>
+        <p class="blue-text">Total Followers: 23,004</p>
+        </div>
+
+        <div class="toggle-button">
+          <label class="white-text" style="width:90px;">Dark Mode</label>
+          <div class="custom-control custom-switch">
+          <input type="checkbox" onchange="lightMode()" class="custom-control-input" id="customSwitch1">
+          <label class="custom-control-label" for="customSwitch1"></label>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+          <div class="col-sm">
+          <div class="card">
+            <div style="height: 4px;background-color: #178FF5;border-top-right-radius: 10px;border-top-left-radius:10px;"></div>
+            <div class="card-body cards-top">
+              <p>
+                <img class="social-icon" src="images/icon-facebook.svg" alt="facebook-logo">
+                 <a class="blue-text" href="#"> @nathanf</a>
+               </p>
+              <h1 class="white-text">1987</h1>
+              <p class="number-label blue-text">Followers</p>
+              <p class="growth-status"><img src="images/icon-up.svg"> 12 Today</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div style="height: 4px;background-color: #1DA1F2;border-top-right-radius: 10px;border-top-left-radius:10px;"></div>
+            <div class="card-body cards-top">
+              <p>
+                <img class="social-icon" src="images/icon-twitter.svg" alt="twitter-logo">
+                 <a class="blue-text" href="#"> @nathanf</a>
+               </p>
+              <h1 class="white-text">1044</h1>
+              <p class="number-label blue-text">Followers</p>
+              <p class="growth-status"><img src="images/icon-up.svg"> 99 Today</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div class="insta-card"></div>
+            <div class="card-body cards-top">
+              <p>
+                <img class="social-icon" src="images/icon-instagram.svg" alt="instagram-logo">
+                 <a class="blue-text" href="#"> @realnathanf</a>
+               </p>
+              <h1 class="white-text">11k</h1>
+              <p class="number-label blue-text">Followers</p>
+              <p class="growth-status"><img src="images/icon-up.svg"> 1099 Today</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <div style="height: 4px;background-color: #C4032B;border-top-right-radius: 10px;border-top-left-radius:10px;"></div>
+            <div class="card-body cards-top">
+              <p>
+                <img class="social-icon" src="images/icon-youtube.svg" alt="twitter-logo">
+                 <a class="blue-text" href="#"> @Nathan F</a>
+               </p>
+              <h1 class="white-text">8239</h1>
+              <p class="number-label blue-text">Subscribers</p>
+              <p class="growth-status-down"><img src="images/icon-down.svg"> 144 Today</p>
+            </div>
+          </div>
+        </div>
+
+  </div>
+  <h4 class="white-text" style="font-weight: inherit; margin-top:30px;">Overview - Today</h4>
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <table>
+
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Page Viewss
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon fix" src="images/icon-facebook.svg" alt="facebook-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                  87
+              </h1>
+            </td>
+            <td class="growth-status right-td"><img src="images/icon-up.svg" /> 3%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Likes
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-facebook.svg" alt="facebook-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                52
+              </h1>
+            </td>
+            <td class="growth-status-down right-td"><img src="images/icon-down.svg" /> 2%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Likes
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-instagram.svg" alt="instagram-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                5462
+              </h1>
+            </td>
+            <td class="growth-status right-td"><img src="images/icon-up.svg" /> 2257%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Profile Views
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-instagram.svg" alt="instagram-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                52k
+              </h1>
+            </td>
+            <td class="growth-status right-td"><img src="images/icon-up.svg" /> 1375%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+  <div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Retweets
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon fix" src="images/icon-twitter.svg" alt="twitter-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                  117
+              </h1>
+            </td>
+            <td class="growth-status right-td"><img src="images/icon-up.svg" /> 303%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Like
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-twitter.svg" alt="twitter-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                507
+              </h1>
+            </td>
+            <td class="growth-status right-td"><img src="images/icon-up.svg" /> 553%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Like
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-youtube.svg" alt="youtube-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                107
+              </h1>
+            </td>
+            <td class="growth-status-down right-td"><img src="images/icon-down.svg" /> 19%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+        <table>
+          <tr>
+            <td class="left-td">
+              <p class="blue-text">
+                Total Views
+              </p>
+            </td>
+            <td class="right-td">
+                <img class="social-icon table-social-icon" src="images/icon-youtube.svg" alt="youtube-logo">
+            </td>
+          </tr>
+          <tr>
+            <td class="left-td">
+              <h1 class="white-text">
+                1407
+              </h1>
+            </td>
+            <td class="growth-status-down right-td"><img src="images/icon-down.svg" /> 12%</td>
+          </tr>
+        </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/baderaharsh" target="_blank">Harsh Badera</a>.
+  </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>
