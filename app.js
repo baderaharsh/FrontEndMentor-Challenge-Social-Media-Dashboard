@@ -19,6 +19,9 @@ function lightMode(){
     }, function(){
       $(this).css("background-color","hsl(227, 47%, 96%)");
     });
+    $(".attribution").css("color","black");
+    $(".attribution a").css("color","#686A7C");
+
     // #E1E3F0
 
   }

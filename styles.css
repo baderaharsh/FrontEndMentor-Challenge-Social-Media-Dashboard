@@ -129,6 +129,5 @@ table{
   border-top-left-radius:10px;
 }
 
-.grey-text{
-  color: #6D6F7F;
-}
+.attribution { font-size: 11px; text-align: center; color: white; margin-top: 10px;}
+.attribution a { color: hsl(228, 45%, 44%); }
